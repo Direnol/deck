@@ -91,6 +91,12 @@ var tencentcloud = {
   },
 };
 
+var yandex = {
+  defaults: {
+    account: '{%yandex.default.account%}',
+  },
+};
+
 window.spinnakerSettings = {
   authEnabled: authEnabled,
   authEndpoint: authEndpoint,
@@ -149,6 +155,7 @@ window.spinnakerSettings = {
     kubernetes: {},
     oracle: oracle,
     tencentcloud: tencentcloud,
+    yandex: yandex,
   },
   version: version,
 };

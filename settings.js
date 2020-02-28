@@ -65,6 +65,7 @@ window.spinnakerSettings = {
     'kubernetes',
     'oracle',
     'tencentcloud',
+    'yandex',
   ],
   defaultTimeZone: process.env.TIMEZONE || 'America/Los_Angeles', // see http://momentjs.com/timezone/docs/#/data-utilities/
   entityTags: {
@@ -231,6 +232,11 @@ window.spinnakerSettings = {
       defaults: {
         account: 'test',
         region: 'ap-guangzhou',
+      },
+    },
+    yandex: {
+      defaults: {
+        account: 'my-yandex-account',
       },
     },
   },
