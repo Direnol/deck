@@ -47,11 +47,13 @@ class ServerGroupDiskDescriptions extends React.Component<IServerGroupDiskDescri
           <React.Fragment key={disk.deviceName}>
             <dt>
               Boot Disk
-              <UpdateBootImageButton
-                application={application}
-                bootImage={ServerGroupDiskDescriptions.getDiskImageName(disk)}
-                serverGroup={serverGroup}
-              />
+              {canUpdateBootImage && (
+                <UpdateBootImageButton
+                  application={application}
+                  bootImage={ServerGroupDiskDescriptions.getDiskImageName(disk)}
+                  serverGroup={serverGroup}
+                />
+              )}
             </dt>
             <dd>{ServerGroupDiskDescriptions.getDiskTypeLabel(disk)}</dd>
             <dd>{ServerGroupDiskDescriptions.getDiskImageLabel(disk)}</dd>
